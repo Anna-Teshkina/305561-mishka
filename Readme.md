@@ -1,7 +1,7 @@
-# Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+﻿# Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анна Тёшкина](https://up.htmlacademy.ru/adaptive/13/user/305561).
-* Наставник: `Неизвестно`.
+* Наставник: [Байдаров Денис](https://github.com/4err).
 
 ---
 
