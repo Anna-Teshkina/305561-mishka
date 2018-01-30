@@ -1,0 +1,115 @@
+.form {
+  .padding-mobile();
+  padding-bottom: 55px;
+}
+
+.form__title {
+  text-transform: uppercase;
+  color: @form-green;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.form__textarea {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #444444;
+  box-sizing: border-box;
+  color: #c7c7c7;
+  .fs-17();
+}
+
+.form__button {
+  width: 100%;
+  display: block;
+}
+
+.form__wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  border: none;
+  margin-bottom: 30px;
+
+  &--info {
+    margin-bottom: 15px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    top: 10px;
+    height: 2px;
+    background: @form-green;
+    right: 0;
+  }
+}
+
+.radio__radio-text,
+.form__checkbox-text,
+.form__input-name {
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+  font-weight: 700;
+}
+
+::-webkit-input-placeholder {
+  color: #c7c7c7;
+  font-size: 17px;
+  font-family: @font;
+}
+
+::-moz-placeholder {
+  color: ##c7c7c7;
+  font-size: 17px;
+  font-family: @font;
+}/* Firefox 19+ */
+
+:-moz-placeholder {
+  color: ##c7c7c7;
+  font-size: 17px;
+  font-family: @font;
+}/* Firefox 18- */
+
+:-ms-input-placeholder {
+  font-size: 17px;
+  color: ##c7c7c7;
+  font-family: @font;
+}
+
+.form__input-name {
+  &--email,
+  &--phone {
+    font-size: 0;
+  }
+}
+
+.form__input-value {
+  line-height: 55px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #444444;
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 98%;
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 98%;
+  }
+}
+
+.form__legend {
+  display: block;
+  margin-bottom: 30px;
+}
