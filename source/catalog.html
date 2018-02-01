@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title> HTML Academy: Мишка </title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"-->
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="226" height="30" alt="«Мишка» изделия ручной работы">
+      <a class="page-header__logo page-header__logo--inner" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка» изделия ручной работы">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"> Открыть меню </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#"> Главная </a>
+            </li>
             <li class="site-list__item site-list__item--active">
-              <a class="site-list__link site-list__link--active"> Главная </a>
+              <a class="site-list__link site-list__link--active"> Каталог товаров </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#"> Каталог товаров </a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#"> Вязание на заказ </a>
+              <a class="site-list__link" href="form.html"> Вязание на заказ </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="#"> Новые поступления </a>
@@ -44,14 +44,15 @@
       </header>
 
       <section class="catalog">
+        <h2 class="visually-hidden"> Карточки товаров </h2>
         <ul class="catalog__list">
           <li class="catalog__item item">
-            <a class="item__details-link item__details-link--img" href="#" border="0">
+            <a class="item__details-link item__details-link--img" href="#">
               <img class="item__picture" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
             </a>
 
             <div class="item__wrapper">
-              <a class="item__details-link item__details-link--name" href="#" border="0">
+              <a class="item__details-link item__details-link--name" href="#">
                 <span class="item__name">
                   Зайчик-попрыгайчик
                 </span>
@@ -66,7 +67,7 @@
           </li>
 
           <li class="catalog__item item">
-            <a class="item__details-link item__details-link--img" href="#" border="0">
+            <a class="item__details-link item__details-link--img" href="#">
               <img class="item__picture" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
             </a>
 
@@ -86,7 +87,7 @@
           </li>
 
           <li class="catalog__item item">
-            <a class="item__details-link item__details-link--img" href="#" border="0">
+            <a class="item__details-link item__details-link--img" href="#">
               <img class="item__picture" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
             </a>
 
@@ -111,21 +112,20 @@
         <header class="video__header">
           <h2 class="video__title"> Процесс производства </h2>
         </header>
+
         <video class="video__content">
           <source class="video__link" src="#">
         </video>
+
         <div class="video__wrapper">
           <p class="video__description">
             По просьбам наших любимых фолловеров мы сняли для вас
             подробное видео о том, как появляются наши товары.
           </p>
-
           <a class="button video__button" href="#"> Сделать заказ </a>
         </div>
       </section>
-
-
-      </main>
+    </main>
 
     <footer class="page-footer">
       <div class="page-footer__social social">
@@ -143,9 +143,10 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <span class="copyright__description"> Разработано: </span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+          Ссылка на HTML Academy
+          <span class="copyright__description"> Разработано: </span>
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" weight="28" height="40">
         </a>
       </div>
     </footer>

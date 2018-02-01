@@ -1,0 +1,75 @@
+.products {
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: -20px;
+  padding-top: 72px;
+}
+
+.products__header {
+  .padding-mobile();
+}
+
+.products__slogan {
+  .f-bold();
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.products__list {
+  padding: 0;
+  margin: 0;
+  margin-top: 120px;
+}
+
+.products__item {
+  list-style: none;
+}
+
+.products__link {
+  font-size: 19px;
+  line-height: 24px;
+  text-align: left;
+  display: block;
+  .padding-mobile();
+  padding-top: 25px;
+  padding-right: 50%;
+  text-decoration: none;
+  color: @white;
+  min-height: 105px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  .f-bold();
+
+  &--home-decoration {
+    background-color: @light-green;
+    background-image: url("../img/icon-interior.svg");
+    background-position: 90%;
+
+    &:hover {
+      background-color: @home-hover;
+    }
+
+    &:focus {
+      background-color: @home-hover;
+      color: fade(@white, 30%);
+    }
+  }
+
+  &--toys {
+    background-color: @dark-green;
+    background-image: url("../img/icon-toy.svg");
+    background-position: 90%;
+
+    &:hover {
+      background-color: @toy-hover;
+    }
+
+    &:focus {
+      background-color: @toy-hover;
+      color: fade(@white, 30%);
+    }
+  }
+}

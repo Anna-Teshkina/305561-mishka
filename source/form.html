@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title> HTML Academy: Мишка </title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"-->
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="226" height="30" alt="«Мишка» изделия ручной работы">
+      <a class="page-header__logo page-header__logo--inner" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка» изделия ручной работы">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"> Открыть меню </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html"> Главная </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html"> Каталог товаров </a>
+            </li>
             <li class="site-list__item site-list__item--active">
-              <a> Главная </a>
+              <a class="site-list__link site-list__link--active"> Вязание на заказ </a>
             </li>
             <li class="site-list__item">
-              <a href="#"> Меню 1 </a>
+              <a class="site-list__link" href="#"> Новые поступления </a>
             </li>
             <li class="site-list__item">
-              <a href="#"> Меню 2 </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#"> Меню 3 </a>
+              <a class="site-list__link" href="#"> Распродажа </a>
             </li>
           </ul>
         </div>
@@ -43,7 +46,7 @@
       <p class="page-inner__text"> Мы будем рады воплотить в жизнь ваши пожелания!
       Заполните простую форму заказа и мы свяжемся с вами,
       чтобы уточнить детали. </p>
-      <form action="" method="post" class="form form--order">
+      <form action="https://echo.htmlacademy.ru" method="post" class="form form--order">
         <fieldset class="form__wrapper form__wrapper--type">
           <h2 class="form__title"> Тип </h2>
 
@@ -113,7 +116,7 @@
 
           <div class="form__block">
             <label class="form__input-name form__input-name--phone" for="in-phone"> Телефон: </label>
-            <input class="form__input-value form__input-value--phone" type="phone" name="phone" placeholder="+7 XXX XX XX*" id="in-phone">
+            <input class="form__input-value form__input-value--phone" type="tel" name="phone" placeholder="+7 XXX XX XX*" id="in-phone">
           </div>
         </fieldset>
 
@@ -128,7 +131,7 @@
 
         <fieldset class="form__wrapper form__wrapper--info">
           <h2 class="form__title"> Доп </h2>
-          <textarea class="form__textarea" name="" id="" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="form__textarea" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
 
         <small class="form__legend"> *Поля обязательны для заполнения </small>
@@ -152,9 +155,10 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <span class="copyright__description"> Разработано: </span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+          Ссылка на HTML Academy
+          <span class="copyright__description"> Разработано: </span>
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" weight="28" height="40">
         </a>
       </div>
     </footer>
