@@ -5,11 +5,12 @@
 
 .hit__title {
   .h2();
+  color: @black;
   .padding-top-header-mobile();
 }
 
 .hit__subtitle {
-  color: @main-green;
+  color: @light-green;
   text-transform: uppercase;
   .fs-17();
   .f-bold();
@@ -21,7 +22,7 @@
   .fs-15();
   padding: 22px 0;
   margin: 0;
-  color: @text-gray;
+  color: @gray;
   /*width: 249px;*/
 }
 
@@ -30,13 +31,13 @@
   line-height: 40px;
   width: 100%;
   margin-bottom: 25px;
-  color: @text-gray;
+  color: @gray;
 }
 
 .hit__row {
   min-height: 40px;
   display: block;
-  .bottom-line();
+  border-bottom: 1px solid @light-gray;
 }
 
 .hit__characteristic {
@@ -50,6 +51,7 @@
 .hit__price {
   .fs-17();
   .f-bold();
+  color: @gray;
   display: block;
   text-align: center;
 }

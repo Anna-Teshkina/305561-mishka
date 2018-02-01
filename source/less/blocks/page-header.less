@@ -2,10 +2,21 @@
   min-height: 80px;
   padding-top: 20px;
   box-sizing: border-box;
-  .bottom-line();
+  border-bottom: 1px solid @light-gray;
 }
 
 .page-header__logo {
   display: inline-block;
   vertical-align: top;
+}
+
+.page-header__logo--inner {
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:focus {
+    opacity: .3;
+  }
 }

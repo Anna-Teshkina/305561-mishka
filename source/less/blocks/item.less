@@ -14,26 +14,28 @@
 .item__name {
   font-size: 17px;
   line-height: 24px;
+  font-family: @sans-bold;
   font-weight: bold;
-  color: #000000;
+  color: @black;
 }
 
 .item__wrapper {
-  border: 1px solid #ededed;
+  border: 1px solid @light-gray;
   padding: 0 25px;
 }
 
 .item__description {
   font-size: 13px;
   line-height: 30px;
-  color: @text-gray;
+  color: @gray;
   margin: 0;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @light-gray;
   margin-bottom: 25px;
 }
 
 .item__price {
-  .f-bold();
+  font-family: @sans-bold;
+  font-weight: 700;
   font-size: 15px;
   line-height: 24px;
   display: inline-block;

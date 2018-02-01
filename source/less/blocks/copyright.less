@@ -1,22 +1,35 @@
 .copyright {
   text-align: center;
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
 }
 
 .copyright__description {
   font-size: 19px;
   .f-bold();
   line-height: 20px;
-  color: #000000;
+  color: @black;
   margin-right: 30px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .copyright__link {
-  display: inline-block;
+  display: block;
   font-size: 0;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  width: 28px;
-  height: 40px;
+  /*background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;*/
+  /*width: 28px;
+  height: 40px;*/
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 30px 0;
+
+  &:hover {
+    opacity: .3;
+  }
+}
+
+.copyright__img {
+  display: inline-block;
   vertical-align: middle;
 }
