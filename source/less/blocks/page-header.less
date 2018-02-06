@@ -1,13 +1,18 @@
 .page-header {
-  min-height: 80px;
+  /*min-height: 80px;
   padding-top: 20px;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
   border-bottom: 1px solid @light-gray;
 }
 
+.page-header__wrapper {
+  position: relative;
+}
+
 .page-header__logo {
-  display: inline-block;
-  vertical-align: top;
+  height: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 .page-header__logo--inner {
@@ -17,5 +22,25 @@
 
   &:focus {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    border-bottom: none;
+    .padding-tablet();
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    left: 50%;
+    margin-left: -43px;
   }
 }

@@ -1,5 +1,16 @@
 .video {
-  margin: 0 30px;
+  /*margin: 0 30px;*/
+  /*padding-bottom: 30px;
+  margin-bottom: 60px;
+  border: 1px solid @light-gray;*/
+}
+
+.video__wrapper {
+  .padding-mobile();
+  box-sizing: border-box;
+}
+
+.video__card {
   padding-bottom: 30px;
   margin-bottom: 60px;
   border: 1px solid @light-gray;
@@ -14,6 +25,8 @@
 
 .video__title {
   font-size: 17px;
+  .f-bold();
+  color: @black;
   line-height: 24px;
   width: 140px;
   padding-left: 90px;
@@ -24,11 +37,25 @@
   background-image: url("../img/video-mobile@1x.jpg");
 }
 
+.video__details {
+  padding: 0 35px;
+}
+
 .video__description {
   font-size: 13px;
   line-height: 24px;
 }
 
-.video__wrapper {
-  .padding-mobile();
+@media (min-width: @tablet-width) {
+  .video {
+    .padding-tablet();
+  }
+
+  .video__wrapper {
+    padding: 0;
+  }
+
+  .video__card {
+
+  }
 }

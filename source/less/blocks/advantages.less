@@ -5,10 +5,12 @@
 .advantages__wrapper {
   .padding-mobile();
   padding-top: 35px;
+  box-sizing: border-box;
 }
 
 .advantages__title {
   .h2();
+  color: @black;
 }
 
 .advantages__list {
@@ -51,5 +53,33 @@
 .advantages__description {
   .fs-17();
   .f-bold();
+  color: @black;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    .padding-tablet();
+  }
+
+  .advantages__wrapper {
+    padding: 0;
+    max-width: 700px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 50%;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .advantages__description {
+    max-width: 295px;
+  }
 }

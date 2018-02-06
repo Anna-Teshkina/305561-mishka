@@ -4,11 +4,13 @@
 
 .contacts__title {
   .h2();
+  color: @black;
   .padding-mobile();
   margin-bottom: 40px;
 }
 
 .contacts__list {
+  display: table;
   .padding-mobile();
   color: @gray;
 }
@@ -79,4 +81,19 @@
 .contacts__write {
   margin: 0 30px;
   margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__list {
+    display: block;
+  }
+
+  .contacts__row-group {
+    display: flex;
+  }
+
+
+  .contacts__row {
+    width: 50%;
+  }
 }

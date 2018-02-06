@@ -1,24 +1,38 @@
-.main-nav {
-  display: inline-block;
-  vertical-align: top;
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
   font-size: 0;
-  background-image: url("../img/icon-menu-open.svg");
+  background-image: url("../img/icon-menu-close.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px;
   background-position: 50%;
   background-color: transparent;
   border: none;
-  /*display: inline-block;*/
-  &:hover,
-  &:focus {
-    cursor: pointer;
+  &--close {
+    background-image: url("../img/icon-menu-open.svg");
   }
 }
 
-.main-nav__wrapper {
-  display: none;
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .site__list {
+    margin-top: 80px;
+  }
 }
