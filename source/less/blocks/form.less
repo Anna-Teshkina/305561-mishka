@@ -176,6 +176,12 @@
 
 @media (min-width: @tablet-width) {
   .form__wrapper {
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__flex-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
