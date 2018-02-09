@@ -37,13 +37,17 @@
   background-image: url("../img/video-mobile@1x.jpg");
 }
 
-.video__details {
-  padding: 0 35px;
-}
-
 .video__description {
   font-size: 13px;
   line-height: 24px;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.video__button {
+  margin: 0 30px;
+  box-sizing: border-box;
 }
 
 @media (min-width: @tablet-width) {
@@ -56,6 +60,45 @@
   }
 
   .video__card {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .video__content {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 455px;
+  }
+
+  .video__content {
+    order: -1;
+    width: 60%;
+    flex-basis: 100%;
+    min-height: 455px;
+  }
+
+  .video__header {
+    order: 0;
+    width: 40%;
+  }
+
+  .video__description {
+    order: 0;
+    align-self: flex-start;
+    width: 40%;
+  }
+
+  .video__button {
+    order: 0;
+    flex-basis: 54px;
+    align-self: flex-start;
+    width: 30%;
   }
 }

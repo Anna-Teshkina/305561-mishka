@@ -64,7 +64,7 @@
 
   .advantages__wrapper {
     padding: 0;
-    max-width: 700px;
+    /*max-width: 700px;*/
   }
 
   .advantages__list {
@@ -77,9 +77,39 @@
     width: 50%;
     flex-grow: 1;
     text-align: left;
+
+    &--ecology {
+      order: 1;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--photo {
+      order: 5;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--present {
+      order: 6;
+    }
   }
 
   .advantages__description {
     max-width: 295px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    max-width: 700px;
   }
 }

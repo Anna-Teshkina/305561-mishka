@@ -6,13 +6,18 @@
 }
 
 .page-header__wrapper {
-  position: relative;
+  /*position: relative;*/
 }
 
 .page-header__logo {
-  height: 80px;
-  display: flex;
-  justify-content: center;
+  /*height: 80px;*/
+  flex-grow: 1;
+  outline: 1px yellow solid;
+}
+
+.page-header__logo-image {
+  min-width: 90px;
+  margin-left: calc(100%/3*2 - 45px);
 }
 
 .page-header__logo--inner {
@@ -32,15 +37,18 @@
   }
 
   .page-header__logo {
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex-basis: 320px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    left: 50%;
-    margin-left: -43px;
+    flex-basis: 200px;
+    flex-grow: 0;
+  }
+
+  .submenu-list {
+    flex-basis: 350px;
+    flex-grow: 1;
   }
 }
