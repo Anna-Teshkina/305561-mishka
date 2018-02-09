@@ -1,14 +1,29 @@
 .page-footer {
-  .padding-mobile();
+  /*.padding-mobile();*/
   background: @bck-gray;
+  outline: 1px red solid;
+}
+
+.page-footer__wrapper {
+  .padding-mobile();
+  box-sizing: border-box;
 }
 
 .page-footer__logo {
   display: none;
+  outline: 1px orange solid;
+}
+
+.page-footer__social {
+  outline: 1px orange solid;
+}
+
+.page-footer__copyright {
+  outline: 1px orange solid;
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
+  .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
   }
