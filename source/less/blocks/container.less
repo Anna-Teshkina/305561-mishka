@@ -1,0 +1,20 @@
+.container {
+  min-width: @mobile-width;
+  width: @mobile-width;
+  outline: 1px green solid;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    min-width: 668px;
+    width: 668px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    max-width: 1050px;
+    width: 1050px;
+  }
+}

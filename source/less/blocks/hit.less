@@ -1,12 +1,21 @@
 .hit {
-  .padding-mobile();
   margin-bottom: 35px;
+}
+
+.hit__wrapper {
+  .padding-mobile();
+  box-sizing: border-box;
+}
+
+.hit__title-wrapper {
+  outline: 1px red solid;
 }
 
 .hit__title {
   .h2();
   color: @black;
   .padding-top-header-mobile();
+  outline: 1px orange solid;
 }
 
 .hit__subtitle {
@@ -16,6 +25,15 @@
   .f-bold();
   margin-top: 5px;
   display: block;
+  outline: 1px orange solid;
+}
+
+.hit__description-wrapper {
+  outline: 1px red solid;
+}
+
+.hit__text-wrapper {
+  outline: 1px orange solid;
 }
 
 .hit__description {
@@ -46,6 +64,12 @@
 
 .hit__picture {
   margin-bottom: 25px;
+  width: 100%;
+  outline: 1px orange solid;
+}
+
+.hit__order-wrapper {
+  outline: 1px orange solid;
 }
 
 .hit__price {
@@ -59,4 +83,101 @@
 .hit__order {
   width: 100%;
   margin-top: 27px;
+}
+
+@media (min-width: @tablet-width) {
+  .hit {
+    .padding-tablet();
+  }
+
+  .hit__wrapper {
+    padding: 0;
+  }
+
+  .hit__title-wrapper {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    margin-bottom: 57px;
+  }
+
+  .hit__subtitle {
+    width: 130px;
+    text-align: center;
+    .fs-17();
+    align-self: center;
+  }
+
+  .hit__title {
+    .fs-43();
+    padding-top: 0;
+  }
+
+  .hit__description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .hit__text-wrapper {
+    width: 50%;
+    padding-right: 43px;
+    box-sizing: border-box;
+    padding-bottom: 97px;
+    outline: 1px orange solid;
+  }
+
+  .hit__picture {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .hit__order-wrapper {
+    width: 50%;
+    padding-right: 43px;
+    box-sizing: border-box;
+    margin-top: -97px;
+  }
+
+  .hit__description {
+    padding: 0;
+    margin-bottom: 40px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hit__description-wrapper {
+    display: block;
+    /*justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;*/
+  }
+
+  .hit__title-wrapper {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-top: 50px;
+  }
+
+  .hit__picture {
+    display: none;
+  }
+
+  .hit__text-wrapper {
+    padding-left: 175px;
+  }
+
+  .hit__order-wrapper {
+    padding-left: 175px;
+  }
+
+  .hit__wrapper {
+    background: url("../img/triple-set-mobile@1x.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
 }

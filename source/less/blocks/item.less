@@ -3,7 +3,7 @@
   display: block;
 
   &--img {
-    height: 195px;
+    /*height: 195px;*/
   }
 
   &--name {
@@ -45,4 +45,15 @@
   font-size: 0;
   display: inline-block;
   vertical-align: top;
+}
+
+.item__picture {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: @desktop-width) {
+  .item__wrapper {
+    flex-grow: 1;
+  }
 }

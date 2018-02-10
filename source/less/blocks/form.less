@@ -1,5 +1,5 @@
 .form {
-  .padding-mobile();
+  /*.padding-mobile();*/
   padding-bottom: 55px;
 }
 
@@ -24,6 +24,7 @@
   border: 2px solid @gray;
   box-sizing: border-box;
   color: @gray;
+  font-family: @sans;
   .fs-17();
 
   &:hover {
@@ -94,7 +95,7 @@
   }
 }
 
-.radio__radio-text,
+.form__radio-text,
 .form__checkbox-text {
   font-size: 17px;
   line-height: 18px;
@@ -112,6 +113,7 @@
   &--email,
   &--phone {
     font-size: 0;
+    display: none;
   }
 }
 
@@ -170,4 +172,64 @@
 .form__legend {
   display: block;
   margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    outline: 1px solid red;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__title {
+    flex-basis: 25%;
+    box-sizing: border-box;
+    display: block;
+    margin-top: 0;
+    outline: 1px solid orange;
+  }
+
+  .form__group {
+    width: 75%;
+    outline: 1px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__block {
+    width: 100%;
+    outline: 1px solid yellow;
+
+    &--color {
+      width: 50%;
+    }
+  }
+
+  .form__input-name {
+    width: 100%;
+    outline: 1px solid yellow;
+  }
+
+  .form__textarea {
+    flex-basis: 75%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__block {
+    &--color {
+      width: 33%;
+    }
+  }
 }

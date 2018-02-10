@@ -5,15 +5,18 @@
 .advantages__wrapper {
   .padding-mobile();
   padding-top: 35px;
+  box-sizing: border-box;
 }
 
 .advantages__title {
   .h2();
+  color: @black;
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
+  outline: 1px red solid;
 }
 
 .advantages__item {
@@ -22,6 +25,7 @@
   margin-top: 29px;
   background-repeat: no-repeat;
   background-position-x: 24px;
+  outline: 1px orange solid;
 
   &--ecology {
     background-image: url("../img/icon-feature-flower.svg");
@@ -51,5 +55,63 @@
 .advantages__description {
   .fs-17();
   .f-bold();
+  color: @black;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    .padding-tablet();
+  }
+
+  .advantages__wrapper {
+    padding: 0;
+    /*max-width: 700px;*/
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 50%;
+    flex-grow: 1;
+    text-align: left;
+
+    &--ecology {
+      order: 1;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--photo {
+      order: 5;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--present {
+      order: 6;
+    }
+  }
+
+  .advantages__description {
+    max-width: 295px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    max-width: 700px;
+  }
 }
