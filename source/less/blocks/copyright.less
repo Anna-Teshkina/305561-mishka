@@ -1,6 +1,5 @@
 .copyright {
   text-align: center;
-  /*padding-bottom: 30px;*/
 }
 
 .copyright__description {
@@ -8,9 +7,12 @@
   .f-bold();
   line-height: 20px;
   color: @black;
-  margin-right: 30px;
-  display: inline-block;
-  vertical-align: middle;
+  /*margin-right: 30px;*/
+  /*display: inline-block;
+  vertical-align: middle;*/
+  flex-grow: 1;
+  align-self: center;
+  text-align: left;
 }
 
 .copyright__link {
@@ -18,11 +20,14 @@
   font-size: 0;
   /*background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;*/
-  /*width: 28px;
-  height: 40px;*/
-  vertical-align: middle;
+  /*width: 28px;*/
+  height: 80px;
+  /*vertical-align: middle;*/
   text-decoration: none;
   /*padding: 30px 0;*/
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 
   &:hover {
     opacity: 0.3;
@@ -30,6 +35,14 @@
 }
 
 .copyright__img {
-  display: inline-block;
-  vertical-align: middle;
+  /*display: inline-block;
+  vertical-align: middle;*/
+  flex-basis: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    text-align: right;
+    padding: 0 50px;
+  }
 }

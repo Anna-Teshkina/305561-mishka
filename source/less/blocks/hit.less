@@ -38,22 +38,22 @@
 
 .hit__description {
   .fs-15();
-  padding: 22px 0;
-  margin: 0;
   color: @gray;
-  /*width: 249px;*/
+  margin-top: 22px;
+  margin-bottom: 20px;
 }
 
 .hit__list {
   font-size: 15px;
-  line-height: 40px;
+  line-height: 35px;
   width: 100%;
   margin-bottom: 25px;
   color: @gray;
+  border-collapse: collapse;
 }
 
 .hit__row {
-  min-height: 40px;
+  min-height: 39px;
   display: block;
   border-bottom: 1px solid @light-gray;
 }
@@ -63,7 +63,7 @@
 }
 
 .hit__picture {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   width: 100%;
   outline: 1px orange solid;
 }
@@ -87,18 +87,18 @@
 
 @media (min-width: @tablet-width) {
   .hit {
-    .padding-tablet();
+    /*.padding-tablet();*/
+    margin-top: 43px;
   }
 
   .hit__wrapper {
-    padding: 0;
+    .padding-tablet();
   }
 
   .hit__title-wrapper {
     display: flex;
-    margin-top: 50px;
     justify-content: space-between;
-    margin-bottom: 57px;
+    margin-bottom: 50px;
   }
 
   .hit__subtitle {
@@ -129,26 +129,55 @@
   }
 
   .hit__picture {
-    width: 50%;
+    width: 334px;
+    height: 400px;
     margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .hit__price {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .hit__order-wrapper {
     width: 50%;
     padding-right: 43px;
     box-sizing: border-box;
-    margin-top: -97px;
+    margin-top: -110px;
   }
 
   .hit__description {
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    margin-top: 0;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .hit__list {
+    margin-bottom: 57px;
+  }
+
+  .hit__order {
+    margin-top: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .hit {
+    margin-top: 40px;
+  }
+
+  .hit__title {
+    .fs-53();
+    padding-left: 10px;
+  }
+
+  .hit__subtitle {
+    padding: 0 15px;
+  }
+
   .hit__description-wrapper {
     display: block;
     /*justify-content: space-between;
@@ -156,10 +185,14 @@
     flex-direction: row;*/
   }
 
+  .hit__description {
+    margin-bottom: 47px;
+  }
+
   .hit__title-wrapper {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    padding-top: 50px;
+    padding-top: 80px;
   }
 
   .hit__picture {
@@ -168,10 +201,13 @@
 
   .hit__text-wrapper {
     padding-left: 175px;
+    padding-right: 55px;
+    padding-bottom: 163px;
   }
 
   .hit__order-wrapper {
     padding-left: 175px;
+    padding-right: 55px;
   }
 
   .hit__wrapper {

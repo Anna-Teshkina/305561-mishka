@@ -3,7 +3,7 @@
   background-color: @white;
   display: block;
   text-transform: uppercase;
-  height: 50px;
+  height: 52px;
   padding: 15px 0;
   font-size: 17px;
   line-height: 17px;
@@ -12,6 +12,18 @@
   box-sizing: border-box;
   text-decoration: none;
   .f-bold();
+
+  &--green {
+    border: 2px solid @light-green;
+    background-color: @light-green;
+    color: @white;
+  }
+
+  &--green:hover {
+    cursor: pointer;
+    background-color: @white;
+    color: @light-green;
+  }
 
   &:hover {
     cursor: pointer;
