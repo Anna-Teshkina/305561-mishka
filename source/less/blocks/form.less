@@ -72,7 +72,6 @@
   &--commentary {
     margin-bottom: 20px;
   }
-
 }
 
 .form__button-wrapper {
@@ -130,12 +129,61 @@
   }
 }
 
-.form__radio-button,
-.form__checkbox-button {
-  display: none;
+.form__radio-text {
+  position: relative;
+  display: block;
+  min-height: 40px;
+  padding: 12px 0;
+  padding-left: 62px;
+  box-sizing: border-box;
+  transition: 0.3s;
+
+  font-size: 17px;
+  line-height: 18px;
+  color: @black;
+  .f-bold();
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @gray;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover::before {
+    border: 2px solid @light-green;
+  }
+
+  &:active::before {
+    border: 2px solid fade(@black, 30%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: none;
+    width: 15px;
+    height: 15px;
+    top: 18px;
+    left: 13px;
+    background: @light-green;
+    border-radius: 8px;
+  }
+
+  &:active::after {
+    display: block;
+  }
 }
 
-.form__radio-text,
 .form__checkbox-text {
   position: relative;
   display: block;
@@ -145,10 +193,15 @@
   box-sizing: border-box;
   transition: 0.3s;
 
+  font-size: 17px;
+  line-height: 18px;
+  color: @black;
+  .f-bold();
+
   &::before {
     position: absolute;
-    content: '';
-    top: 5px;
+    content: "";
+    top: 0;
     left: 0;
     width: 40px;
     height: 40px;
@@ -170,27 +223,16 @@
 
   &::after {
     position: absolute;
-    content: '';
-    display: block;
+    content: "";
+    display: none;
 
-    top: 15px;
-    left: 15px;
-  }
-}
+    width: 26px;
+    height: 20px;
+    top: 9px;
+    left: 7px;
 
-.form__checkbox-text {
-  &::before {
-    top: 0;
-  }
-
-  &:active::after {
-    display: block;
-  }
-}
-
-.form__radio-text {
-  &::before {
-    border-radius: 20px;
+    background-image: url("../img/icon-tick.svg");
+    background-size: cover;
   }
 
   &:active::after {
@@ -198,49 +240,25 @@
   }
 }
 
-.form__checkbox-button[type="checkbox"]:checked + label::after {
-  width: 28px;
-  height: 20px;
-  top: 15px;
-  left: 15px;
+.form__radio-button[type="radio"] {
+  display: none;
 
-  background-image: url("../img/icon-tick.svg");
-  background-size: cover;
+  &:checked + label::after {
+    display: block;
+  }
 }
 
-.form__radio-button[type="radio"]:checked + label::after {
-  width: 20px;
-  height: 20px;
-  top: 15px;
-  left: 15px;
-  background: @light-green;
-  border-radius: 10px;
+.form__checkbox-button[type="checkbox"] {
+  display: none;
+
+  &:checked + label::after {
+    display: block;
+  }
 }
 
 .form__button {
   width: 100%;
   display: block;
-}
-
-/*.form__wrapper {
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  padding: 0;
-  border: none;
-  margin-bottom: 30px;
-
-  &--info {
-    margin-bottom: 15px;
-  }
-}*/
-
-.form__radio-text,
-.form__checkbox-text {
-  font-size: 17px;
-  line-height: 18px;
-  color: @black;
-  .f-bold();
 }
 
 .form__input-name {
@@ -408,7 +426,6 @@
     &--person {
       display: flex;
     }
-
   }
 
   .form__input-name {
@@ -478,26 +495,53 @@
     }
   }
 
-  .form__radio-text, .form__checkbox-text {
+  .form__radio-text {
     font-size: 19px;
     line-height: 19px;
     min-height: 50px;
     padding: 14px 0;
     padding-left: 80px;
+
+    &::before {
+      top: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      left: 15px;
+      border-radius: 10px;
+    }
+
+    br {
+      display: none;
+    }
   }
 
-  .form__radio-text:before, .form__checkbox-text:before {
-    top: 0;
-    width: 50px;
-    height: 50px;
-  }
+  .form__checkbox-text {
+    font-size: 19px;
+    line-height: 19px;
+    min-height: 50px;
+    padding: 14px 0;
+    padding-left: 80px;
 
-  .form__radio-text::before {
-    border-radius: 25px;
-  }
+    &::before {
+      top: 0;
+      width: 50px;
+      height: 50px;
+    }
 
-  .form__radio-text br {
-    display: none;
+    &::after {
+      width: 28px;
+      height: 20px;
+      top: 15px;
+      left: 15px;
+      border-radius: 10px;
+    }
   }
 
   .form__button-wrapper {
@@ -520,12 +564,11 @@
     margin-bottom: 0;
     padding: 10px 0;
     box-sizing: border-box;
-  }
 
-  .form__legend sup {
-    font-size: 17px;
+    sup {
+      font-size: 17px;
+    }
   }
-
 }
 
 @media (min-width: @desktop-width) {

@@ -15,11 +15,12 @@
   outline: 1px yellow solid;
 
   &:hover {
-
+    opacity: 0.6;
+    cursor: pointer;
   }
 
   &:active {
-
+    opacity: 0.3;
   }
 }
 
@@ -44,18 +45,14 @@
 @media (min-width: @tablet-width) {
   .page-header {
     border-bottom: none;
-    /*.padding-tablet();*/
   }
 
   .page-header__wrapper {
-    /*.padding-tablet();*/
     box-sizing: border-box;
   }
 
   .page-header__logo {
     flex-basis: 217px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding-left: 50px;
     border-bottom: 1px solid @light-gray;
