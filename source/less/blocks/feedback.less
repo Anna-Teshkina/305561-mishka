@@ -1,5 +1,5 @@
 .feedback {
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .feedback__wrapper {
@@ -10,6 +10,7 @@
 .feedback__title {
   .h2();
   color: @black;
+  margin-bottom: 25px;
   outline: 1px orange solid;
 }
 
@@ -22,8 +23,10 @@
 }
 
 .feedback__text {
-  .fs-15();
+  font-size: 15px;
+  line-height: 30px;
   color: @gray;
+  margin-bottom: 28px;
 }
 
 .feedback__write {
@@ -32,17 +35,22 @@
 
 .feedback__author-name {
   font-style: normal;
+  .fs-17();
   .f-bold();
+  margin-bottom: 5px;
+  display: block;
 }
 
 .feedback__author-link {
   color: @gray;
+  font-size: 17px;
+  line-height: 30px;
 }
 
 .feedback__navigation {
-  border: 2px solid @light-gray;
-  margin-top: 35px;
-  margin-bottom: 40px;
+  border: 1px solid @light-gray;
+  margin-top: 27px;
+  margin-bottom: 37px;
   position: relative;
   display: flex;
   outline: 1px yellow solid;
@@ -97,32 +105,58 @@
 }
 
 @media (min-width: @tablet-width) {
+  .feedback {
+    margin-top: 35px;
+  }
+
   .feedback__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
+    overflow: hidden;
+
+    .padding-tablet();
+    box-sizing: border-box;
+    background-image: url("../img/review@1x.jpg");
+    background-position: -35px top;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+
+  .feedback__slider-wrapper {
+    margin-bottom: 45px;
+    position: relative;
+    flex-basis: 100%;
+    order: 3;
   }
 
   .feedback__title {
+    .fs-43();
     flex-basis: 50%;
     order: 1;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+
+  .feedback__text {
+    font-size: 17px;
+    margin-bottom: 60px;
   }
 
   .feedback__write {
     flex-basis: 175px;
     order: 2;
     margin-left: auto;
-  }
-
-  .feedback__slider-wrapper {
-    position: relative;
-    flex-basis: 100%;
-    order: 3;
+    margin-top: 80px;
   }
 
   .feedback__author-link {
     display: block;
+  }
+
+  .feedback__author-name {
+    font-size: 18px;
   }
 
   .feedback__navigation {
@@ -137,5 +171,38 @@
     &::before {
       display: none;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__title {
+    .fs-53();
+  }
+
+  .feedback__write {
+    margin-top: 87px;
+  }
+
+  .feedback__wrapper {
+    padding-left: 225px;
+    background-position: 50px top;
+    background-size: auto 100%;
+  }
+
+  .feedback__text {
+    padding-right: 105px;
+    margin-bottom: 40px;
+  }
+
+  .feedback__author-name {
+    font-size: 17px;
+  }
+
+  .feedback__navigation {
+    width: 175px;
+  }
+
+  .feedback__slider-wrapper {
+    margin-bottom: 95px;
   }
 }

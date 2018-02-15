@@ -15,20 +15,27 @@
 .catalog__item {
   list-style: none;
   margin-bottom: 30px;
+  transition: 0.3s box-shadow;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .catalog {
-    .padding-tablet();
-  }
-
   .catalog__wrapper {
-    padding: 0;
+    .padding-tablet();
+    /*padding: 0;*/
   }
 
   .catalog__item {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 54px;
   }
 
   .item__details-link--img {

@@ -3,14 +3,16 @@
 }
 
 .advantages__wrapper {
-  .padding-mobile();
+  /*.padding-mobile();*/
   padding-top: 35px;
   box-sizing: border-box;
 }
 
 .advantages__title {
   .h2();
+  .padding-mobile();
   color: @black;
+  margin-bottom: 35px;
 }
 
 .advantages__list {
@@ -19,13 +21,27 @@
   outline: 1px red solid;
 }
 
+.advantages__description {
+  .fs-17();
+  .f-bold();
+  color: @black;
+}
+
 .advantages__item {
+  .padding-mobile();
   list-style: none;
-  padding-top: 55px;
-  margin-top: 29px;
+  /*margin-bottom: 25px;*/
   background-repeat: no-repeat;
-  background-position-x: 24px;
+  background-position-x: 34px;
   outline: 1px orange solid;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 35px;
+  margin-bottom: 31px;
+
+  & path {
+    fill: @light-green;
+  }
 
   &--ecology {
     background-image: url("../img/icon-feature-flower.svg");
@@ -52,21 +68,20 @@
   }
 }
 
-.advantages__description {
-  .fs-17();
-  .f-bold();
-  color: @black;
-  margin: 0;
-}
-
 @media (min-width: @tablet-width) {
   .advantages {
-    .padding-tablet();
+    margin-top: 120px;
   }
 
   .advantages__wrapper {
-    padding: 0;
+    .padding-tablet();
+    box-sizing: border-box;
     /*max-width: 700px;*/
+  }
+
+  .advantages__title {
+    .fs-43();
+    padding: 0;
   }
 
   .advantages__list {
@@ -79,6 +94,11 @@
     width: 50%;
     flex-grow: 1;
     text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+    background-position-x: 5px;
+    background-position-y: 13px;
+    margin-bottom: 27px;
 
     &--ecology {
       order: 1;
@@ -107,11 +127,23 @@
 
   .advantages__description {
     max-width: 295px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .advantages {
+    margin-top: 155px;
+  }
+
   .advantages__wrapper {
     max-width: 700px;
+    padding: 0 30px;
+  }
+
+  .advantages__title {
+    .fs-53();
   }
 }

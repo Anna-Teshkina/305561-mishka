@@ -3,8 +3,8 @@
   background-color: #f9f9f9;
   background-repeat: no-repeat;
   background-position-x: 50%;
-  background-position-y: -20px;
-  padding-top: 72px;
+  /*background-position-y: 62px;*/
+  padding-top: 70px;
 }
 
 .products__header {
@@ -28,6 +28,14 @@
 
 .products__item {
   list-style: none;
+
+  &--home-decoration {
+    background-color: @light-green;
+  }
+
+  &--toys {
+    background-color: @dark-green;
+  }
 }
 
 .products__link {
@@ -40,15 +48,24 @@
   padding-right: 50%;
   text-decoration: none;
   color: @white;
-  min-height: 105px;
+  min-height: 103px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   .f-bold();
+  position: relative;
+
+  &:hover path {
+    opacity: 0.7;
+  }
+
+  &:focus path {
+    opacity: 0.3;
+  }
 
   &--home-decoration {
     background-color: @light-green;
-    background-image: url("../img/icon-interior.svg");
-    background-position: 90%;
+    /*background-image: url("../img/icon-interior.svg");
+    background-position: 90%;*/
 
     &:hover {
       background-color: @home-hover;
@@ -62,8 +79,8 @@
 
   &--toys {
     background-color: @dark-green;
-    background-image: url("../img/icon-toy.svg");
-    background-position: 90%;
+    /*background-image: url("../img/icon-toy.svg");
+    background-position: 90%;*/
 
     &:hover {
       background-color: @toy-hover;
@@ -76,11 +93,39 @@
   }
 }
 
+.products__icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 112px;
+  /*text-align: center;*/
+
+
+  &--home-decoration {
+    margin-top: -62px/2;
+  }
+
+  &--toys {
+    margin-top: -60px/2;
+  }
+
+  path {
+    fill: @green-icon;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .products {
-    .padding-tablet();
+    /*.padding-tablet();*/
     padding-top: 150px;
-    border-top: 1px solid @light-gray;
+    background-size: cover;
+    background-position-y: 0;
+  }
+
+  .products__wrapper {
+    .padding-tablet();
+    box-sizing: border-box;
   }
 
   .products__header {
@@ -89,6 +134,14 @@
 
   .products__list {
     display: flex;
+    margin-top: 375px;
+  }
+
+  .products__link {
+    min-height: 120px;
+    padding: 0 35px;
+    padding-top: 30px;
+    line-height: 28px;
   }
 
   .products__item {
@@ -97,5 +150,27 @@
 
   .products__slogan {
     .fs-43();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products__slogan {
+    .fs-53();
+  }
+
+  .products {
+    padding-top: 153px;
+  }
+
+  .products__list {
+    margin-top: 360px;
+  }
+
+  .products__link {
+    transition: 0.2s;
+
+    &:hover {
+      transform: translate(0, -5px);
+    }
   }
 }

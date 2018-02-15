@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0 auto;
   display: block;
-  height: 60px;
+  height: 80px;
   width: 190px;
 }
 
@@ -16,8 +16,8 @@
   list-style: none;
   display: inline-block;
   vertical-align: top;
-  width: 60px;
-  height: 60px;
+  /*width: 60px;
+  height: 80px;*/
   position: relative;
 }
 
@@ -25,7 +25,7 @@
   font-size: 0;
   display: block;
   width: 60px;
-  height: 60px;
+  height: 80px;
   background-repeat: no-repeat;
   background-position: 50%;
 
@@ -39,5 +39,11 @@
 
   &--twitter {
     background-image: url("../img/icon-twitter.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__link {
+    width: 55px;
   }
 }

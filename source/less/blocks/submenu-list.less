@@ -8,9 +8,10 @@
 }
 
 .submenu-list__link {
-  padding: 0 30px;
-  /*min-height: 80px;*/
-  padding-left: 47px;
+  position: relative;
+  padding: 30px;
+  min-height: 80px;
+  padding-left: 75px;
   display: block;
 
   .f-bold();
@@ -20,25 +21,38 @@
   min-width: 260px;
   box-sizing: border-box;
 
-  &--search {
-    background-image: url("../img/icon-search.svg");
-    background-position: left center;
-    background-repeat: no-repeat;
+  &:hover path {
+    fill: @light-green;
+    opacity: 1;
   }
 
-  &--cart {
-    background-image: url("../img/icon-cart.svg");
-    background-position: left center;
-    background-repeat: no-repeat;
+  &:active path {
+    opacity: 0.3;
   }
 }
+
+.submenu-list__icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  width: 21px;
+  height: 18px;
+
+  path {
+    fill: @black;
+    opacity: 0.2;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .submenu-list {
     display: flex;
     order: 2;
     flex-wrap: wrap;
-    flex-basis: 348px;
+    flex-basis: 398px;
+    border-bottom: 1px solid @light-gray;
   }
 
   .submenu-list__item {
@@ -53,10 +67,15 @@
       flex-grow: 1;
       padding: 0;
       justify-content: flex-end;
+      box-sizing: border-box;
     }
   }
 
   .submenu-list__link {
+    padding-right: initial;
+    min-height: 90px;
+    line-height: 24px;
+
     &--search {
       font-size: 0;
       min-width: initial;
@@ -64,18 +83,38 @@
     }
 
     &--cart {
-      text-align: right;
+      text-align: left;
       min-width: initial;
+      padding-left: 80px;
     }
+  }
+
+  .submenu-list__icon {
+    top: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  /*.submenu-list {
+  .submenu-list {
+    flex-basis: 400px;
     flex-grow: 1;
-  }*/
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
 
   .submenu-list__item {
-    min-height: 90px;
+    min-height: 82px;
+
+    &--cart {
+      flex-grow: 0;
+    }
+  }
+
+  .submenu-list__link {
+    &--cart {
+      flex-basis: 317px;
+      padding-right: 50px;
+    }
   }
 }
