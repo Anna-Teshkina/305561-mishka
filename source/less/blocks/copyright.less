@@ -28,7 +28,11 @@
   display: flex;
   justify-content: space-between;
 
-  &:hover {
+  &:hover path {
+    fill: @academy-logo-hover;
+  }
+
+  &:focus {
     opacity: 0.3;
   }
 }
@@ -37,6 +41,11 @@
   /*display: inline-block;
   vertical-align: middle;*/
   flex-basis: 26px;
+  align-self: center;
+
+  path {
+    fill: @light-green;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -12,6 +12,22 @@
 .page-footer__logo {
   display: none;
   outline: 1px orange solid;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover path {
+    fill: @green-hover;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-image {
+  align-self: center;
 }
 
 .page-footer__social {
