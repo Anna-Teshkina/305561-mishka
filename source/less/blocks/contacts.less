@@ -6,7 +6,7 @@
   padding-bottom: 40px;
   position: relative;
 
-  &:after {
+  &::after {
     position: absolute;
     top: -45px;
     left: 0;
@@ -22,7 +22,7 @@
 }
 
 .contacts__info {
-  outline: 1px red solid;
+  /*outline: 1px red solid;*/
   .padding-mobile();
   box-sizing: border-box;
 }
@@ -33,7 +33,7 @@
   .f-bold();
   color: @black;
   margin-bottom: 28px;
-  outline: 1px orange solid;
+  /*outline: 1px orange solid;*/
 }
 
 .contacts__list {
@@ -42,11 +42,11 @@
   color: @gray;
   border-collapse: collapse;
 
-  outline: 1px orange solid;
+  /*outline: 1px orange solid;*/
 }
 
 .contacts__row {
-  outline: 1px yellow solid;
+  /*outline: 1px yellow solid;*/
 
   &:first-child {
     height: 60px;
@@ -91,13 +91,20 @@
 .contacts__map {
   font-size: 0;
   margin-top: 38px;
-  margin-bottom: 25px;
+  margin-bottom: 37px;
+  height: 457px;
+  background-color: @bck-gray;
 }
 
 .contacts__map-pic {
-  width: 100%;
   position: relative;
-  outline: 1px orange solid;
+  /*outline: 1px orange solid;*/
+  width: 320px;
+  height: 454.16px;
+
+  &--hidden {
+    display: none;
+  }
 
   &::before {
     position: absolute;
@@ -122,16 +129,7 @@
 .contacts__write {
   margin: 0 auto;
   max-width: 260px;
-  outline: 1px orange solid;
-}
-
-.contacts__map-pic {
-  width: 320px;
-  height: 454.16px;
-
-  &--hidden {
-    display: none;
-  }
+  /*outline: 1px orange solid;*/
 }
 
 .contacts__map-iframe {
@@ -150,7 +148,7 @@
   .contacts__wrapper {
     padding-bottom: 55px;
 
-    &:after {
+    &::after {
       top: -59px;
       left: 0;
       height: 22px;
@@ -200,6 +198,7 @@
 
   .contacts__row {
     flex-basis: 50%;
+    display: block;
   }
 
   .contacts__title {
@@ -216,7 +215,7 @@
 
   .contacts__map {
     margin-top: 55px;
-    margin-bottom: 43px;
+    margin-bottom: 57px;
   }
 }
 
@@ -239,9 +238,9 @@
     flex-wrap: wrap;
     margin-bottom: 35px;
 
-    &:after {
+    &::after {
       top: -93px;
-      left: 0px;
+      left: 0;
       height: 25px;
       width: 1050px;
     }

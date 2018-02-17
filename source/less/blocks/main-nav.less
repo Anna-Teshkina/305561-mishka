@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
   position: relative;
 }
 
@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px solid orange;
+  /*outline: 1px solid orange;*/
 }
 
 .main-nav__toggle {
@@ -28,7 +28,7 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  background-image: url(../img/icon-menu-close.svg);
+  background-image: url("../img/icon-menu-close.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -46,7 +46,7 @@
 
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__toggle {
-    background-image: url(../img/icon-menu-open.svg);
+    background-image: url("../img/icon-menu-open.svg");
     background-repeat: no-repeat;
     background-position: center;
   }

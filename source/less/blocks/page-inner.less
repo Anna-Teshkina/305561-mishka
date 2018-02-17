@@ -33,16 +33,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-inner {
+  /*.page-inner {
     position: relative;
     top: -64px;
     margin-bottom: -64px;
-  }
+  }*/
 
   .page-inner__header-wrapper {
     height: 225px;
 
-    &:after {
+    &::after {
       position: absolute;
       bottom: -15px;
       left: 0;
@@ -53,7 +53,7 @@
       background-position: center 0;
       background-size: 768px;
       height: 24px;
-      background-image: url(../img/bg-zigzag-fill.svg);
+      background-image: url("../img/bg-zigzag-fill.svg");
     }
   }
 
@@ -69,24 +69,28 @@
 
   .page-inner__header {
     margin-bottom: 80px;
+    position: relative;
+    top: -64px;
+    margin-bottom: 17px;
   }
 
   .page-inner__name {
     .fs-43();
-    margin-top: 17px;
+    margin-top: 10px;
+
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-inner {
-    top: -56px;
-    margin-bottom: -56px;
-  }
+  /*.page-inner {
+    top: -55px;
+    margin-bottom: -55px;
+  }*/
 
   .page-inner__header-wrapper {
     height: 250px;
 
-    &:after {
+    &::after {
       bottom: -9px;
       background-size: 1150px;
     }
@@ -99,6 +103,8 @@
 
   .page-inner__header {
     margin-bottom: 135px;
+    top: -56px;
+    margin-bottom: 80px;
   }
 
   .page-inner__name {
