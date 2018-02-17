@@ -1,15 +1,20 @@
 .form {
   /*.padding-mobile();*/
-  padding-bottom: 55px;
+  padding-bottom: 60px;
 }
 
 .form__flex-wrapper {
   .padding-mobile();
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 8px;
 
   &--type {
     margin-bottom: 30px;
+  }
+
+  &--commentary {
+    margin-bottom: 0;
   }
 
   &::before {
@@ -62,15 +67,15 @@
   }
 
   &--tel {
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   &--email {
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   &--commentary {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 
@@ -277,8 +282,9 @@
 
 .form__input-value {
   font-size: 17px;
-  line-height: 46px;
-  margin-bottom: 26px;
+  line-height: 18px;
+  height: 52px;
+  margin-bottom: 22px;
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -344,6 +350,11 @@
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
+
+  sup {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -362,7 +373,7 @@
 
     &--info {
       padding-top: 50px;
-      padding-bottom: 23px;
+      padding-bottom: 25px;
       margin-bottom: 0;
     }
   }
@@ -373,18 +384,19 @@
     flex-wrap: wrap;
     outline: 1px solid red;
     .padding-tablet();
+    margin-bottom: 0;
 
     &::before {
       display: none;
     }
 
     &--type {
-      margin-bottom: 50px;
+      margin-bottom: 51px;
     }
 
     &--name {
       padding-top: 50px;
-      padding-bottom: 28px;
+      padding-bottom: 25px;
     }
 
     &--commentary {
@@ -415,8 +427,14 @@
     outline: 1px solid yellow;
 
     &--color {
-      width: 50%;
+      width: 235px;
       margin-bottom: 27px;
+      margin-right: 28px;
+    }
+
+    &--color:nth-child(2n) {
+      margin-bottom: 27px;
+      margin-right: 0;
     }
 
     &--type {
@@ -441,6 +459,7 @@
     flex-grow: 1;
     padding-left: 15px;
     font-size: 19px;
+    margin-bottom: 24px;
 
     &--phone {
       background-position: 95%;
@@ -531,15 +550,15 @@
 
     &::before {
       top: 0;
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
     }
 
     &::after {
-      width: 28px;
-      height: 20px;
+      width: 34px;
+      height: 24px;
       top: 15px;
-      left: 15px;
+      left: 11px;
       border-radius: 10px;
     }
   }
@@ -603,11 +622,19 @@
     &--color {
       padding-top: 52px;
     }
+
+    &--info {
+      padding-top: 51px;
+    }
   }
 
   .form__block {
     &--color {
-      flex-basis: 264px;
+      flex-basis: 235px;
+    }
+
+    &--color:nth-child(2n) {
+      margin-right: 28px;
     }
 
     &--person {
@@ -617,8 +644,17 @@
 
   .form__title {
     flex-basis: 1050px/6;
-    padding-right: 0;
+    padding-right: 9px;
     text-align: center;
+
+    &--tel {
+      padding-right: 17px;
+    }
+
+    &--email {
+      padding-right: 0px;
+      margin-top: 3px;
+    }
   }
 
   .form__group {

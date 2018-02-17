@@ -11,6 +11,7 @@
   color: @gray;
   box-sizing: border-box;
   text-decoration: none;
+  transition: 0.05s;
   .f-bold();
 
   &--green {
@@ -19,21 +20,25 @@
     color: @white;
   }
 
-  &--green:hover {
-    cursor: pointer;
-    background-color: @white;
-    color: @light-green;
-  }
-
   &:hover {
     cursor: pointer;
     color: @white;
     background-color: @gray;
   }
 
+  &--green:hover {
+    background-color: fade(@light-green, 80%);
+    border: 2px solid fade(@light-green, 80%);
+  }
+
   &:focus {
     cursor: pointer;
-    color: lighten(@black, 49%);
+    color: fade(@white, 30%);
     background-color: @gray;
+  }
+
+  &--green:focus {
+    background-color: @white;
+    color: fade(@light-green, 80%);
   }
 }

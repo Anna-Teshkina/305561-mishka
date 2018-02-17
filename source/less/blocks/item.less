@@ -82,7 +82,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .item__details-link--img {
+    width: 50%;
+  }
+
   .item__wrapper {
+    width: 50%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -112,12 +117,21 @@
 
   .item__description {
     border-bottom: none;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .item__details-link--img {
+    width: 100%;
+  }
+
   .item__wrapper {
     flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .item__picture {
