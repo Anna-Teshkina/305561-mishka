@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "build/css/style.min.css": ["source/css/style.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
     },
