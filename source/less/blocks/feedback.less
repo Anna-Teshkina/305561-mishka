@@ -1,5 +1,5 @@
 .feedback {
-  margin-top: 55px;
+  margin-top: 34px;
 }
 
 .feedback__wrapper {
@@ -11,11 +11,6 @@
   .h2();
   color: @black;
   margin-bottom: 25px;
-  outline: 1px orange solid;
-}
-
-.feedback__slider-wrapper {
-  outline: 1px orange solid;
 }
 
 .feedback__item {
@@ -27,10 +22,6 @@
   line-height: 30px;
   color: @gray;
   margin-bottom: 28px;
-}
-
-.feedback__write {
-  outline: 1px orange solid;
 }
 
 .feedback__author-name {
@@ -53,7 +44,6 @@
   margin-bottom: 37px;
   position: relative;
   display: flex;
-  outline: 1px yellow solid;
 
   &::before {
     content: "";
@@ -66,12 +56,9 @@
   }
 }
 
-.feedback__prev {
-  /*display: inline-block;
-  width: 49%;*/
+.feedback__arrow {
   flex-basis: 50%;
   border: none;
-  background-image: url("../img/icon-left-arrow.svg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-color: @white;
@@ -79,34 +66,27 @@
   font-size: 0;
   height: 52px;
 
-  &:hover,
-  &:focus {
+  &--prev {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
     cursor: pointer;
   }
-}
 
-.feedback__next {
-  /*display: inline-block;
-  width: 49%;*/
-  flex-basis: 50%;
-  border: none;
-  background-image: url("../img/icon-right-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-color: @white;
-  box-sizing: border-box;
-  font-size: 0;
-  height: 52px;
-
-  &:hover,
   &:focus {
-    cursor: pointer;
+    opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
   .feedback {
-    margin-top: 35px;
+    margin-top: 29px;
   }
 
   .feedback__wrapper {
@@ -139,7 +119,7 @@
     .fs-43();
     flex-basis: 50%;
     order: 1;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     margin-top: 80px;
   }
 
@@ -152,7 +132,7 @@
     flex-basis: 175px;
     order: 2;
     margin-left: auto;
-    margin-top: 80px;
+    margin-top: 82px;
   }
 
   .feedback__author-link {
@@ -164,7 +144,7 @@
   }
 
   .feedback__navigation {
-    width: 25%;
+    width: 175px;
     position: absolute;
     bottom: 0;
     margin: 0;
@@ -179,12 +159,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedback {
+    margin-top: 40px;
+  }
+
   .feedback__title {
     .fs-53();
+    margin-top: 70px;
   }
 
   .feedback__write {
-    margin-top: 87px;
+    margin-top: 78px;
   }
 
   .feedback__wrapper {
@@ -194,7 +179,7 @@
   }
 
   .feedback__text {
-    padding-right: 105px;
+    padding-right: 115px;
     margin-bottom: 40px;
   }
 

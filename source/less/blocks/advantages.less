@@ -3,22 +3,35 @@
 }
 
 .advantages__wrapper {
-  /*.padding-mobile();*/
   padding-top: 35px;
   box-sizing: border-box;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 100%;
+    display: block;
+    content: "";
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: center 0;
+    background-size: 400px;
+  }
 }
 
 .advantages__title {
   .h2();
   .padding-mobile();
   color: @black;
-  margin-bottom: 35px;
+  margin-bottom: 23px;
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
-  outline: 1px red solid;
 }
 
 .advantages__description {
@@ -30,58 +43,78 @@
 .advantages__item {
   .padding-mobile();
   list-style: none;
-  /*margin-bottom: 25px;*/
   background-repeat: no-repeat;
   background-position-x: 34px;
-  outline: 1px orange solid;
   position: relative;
   box-sizing: border-box;
-  padding-top: 35px;
-  margin-bottom: 31px;
+  padding-top: 45px;
+  padding-bottom: 4px;
+  margin-bottom: 0;
 
   & path {
     fill: @light-green;
   }
 
-  &--ecology {
+  &::before {
+    top: 0;
+    left: 28px;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--ecology::before {
     background-image: url("../img/icon-feature-flower.svg");
   }
 
-  &--price {
+  &--price::before {
     background-image: url("../img/icon-feature-money.svg");
   }
 
-  &--photo {
+  &--photo::before {
     background-image: url("../img/icon-feature-heart.svg");
   }
 
-  &--handmade {
+  &--handmade::before {
     background-image: url("../img/icon-feature-ball.svg");
   }
 
-  &--support {
+  &--support::before {
     background-image: url("../img/icon-feature-rocket.svg");
   }
 
-  &--present {
+  &--present::before {
     background-image: url("../img/icon-feature-gift.svg");
   }
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
-    margin-top: 120px;
+    margin-top: 104px;
   }
 
   .advantages__wrapper {
     .padding-tablet();
     box-sizing: border-box;
-    /*max-width: 700px;*/
+
+    &::after {
+      top: -65px;
+      left: 0;
+      height: 22px;
+      width: 768px;
+      background-size: 800px;
+    }
   }
 
   .advantages__title {
     .fs-43();
     padding: 0;
+    margin-bottom: 43px;
   }
 
   .advantages__list {
@@ -129,7 +162,12 @@
     max-width: 295px;
     font-size: 20px;
     line-height: 22px;
-    margin-top: 30px;
+    margin-top: 15px;
+  }
+
+  .advantages__item::before {
+    top: -3px;
+    left: 0;
   }
 }
 
@@ -141,6 +179,13 @@
   .advantages__wrapper {
     max-width: 700px;
     padding: 0 30px;
+
+    &::after {
+      top: -81px;
+      left: -140px;
+      height: 22px;
+      width: 1050px;
+    }
   }
 
   .advantages__title {

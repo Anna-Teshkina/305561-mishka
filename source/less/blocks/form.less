@@ -1,15 +1,19 @@
 .form {
-  /*.padding-mobile();*/
-  padding-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 .form__flex-wrapper {
   .padding-mobile();
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 8px;
 
   &--type {
     margin-bottom: 30px;
+  }
+
+  &--commentary {
+    margin-bottom: 0;
   }
 
   &::before {
@@ -45,8 +49,6 @@
   .f-bold();
   margin-bottom: 16px;
   position: relative;
-  /*outline: red solid;*/
-  /*background: @white;*/
   z-index: 10;
   display: inline-block;
   padding-right: 25px;
@@ -62,15 +64,15 @@
   }
 
   &--tel {
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   &--email {
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   &--commentary {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 
@@ -277,12 +279,23 @@
 
 .form__input-value {
   font-size: 17px;
-  line-height: 46px;
-  margin-bottom: 26px;
+  line-height: 18px;
+  height: 52px;
+  margin-bottom: 22px;
   width: 100%;
   box-sizing: border-box;
   border: none;
   border-bottom: 2px solid @gray;
+
+  &:hover {
+    border-bottom: 2px solid @light-green;
+    cursor: pointer;
+    fill: @light-green;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @light-green;
+  }
 
   &--phone {
     background-image: url("../img/icon-phone.svg");
@@ -344,11 +357,16 @@
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
+
+  sup {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .form {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .form__wrapper-gray {
@@ -362,7 +380,7 @@
 
     &--info {
       padding-top: 50px;
-      padding-bottom: 23px;
+      padding-bottom: 25px;
       margin-bottom: 0;
     }
   }
@@ -371,52 +389,56 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    outline: 1px solid red;
     .padding-tablet();
+    margin-bottom: 0;
 
     &::before {
       display: none;
     }
 
     &--type {
-      margin-bottom: 50px;
+      margin-bottom: 49px;
     }
 
     &--name {
       padding-top: 50px;
-      padding-bottom: 28px;
+      padding-bottom: 25px;
     }
 
     &--commentary {
-      padding-top: 50px;
+      padding-top: 51px;
       padding-bottom: 28px;
     }
   }
 
   .form__title {
-    flex-basis: 25%;
+    flex-basis: auto;
+    width: 167px;
     box-sizing: border-box;
     display: block;
     margin: 0;
-    outline: 1px solid orange;
     padding-top: 13px;
     background: none;
   }
 
   .form__group {
     width: 75%;
-    outline: 1px solid orange;
     display: flex;
     flex-wrap: wrap;
   }
 
   .form__block {
     width: 100%;
-    outline: 1px solid yellow;
 
     &--color {
-      width: 50%;
+      width: 235px;
       margin-bottom: 27px;
+      margin-right: 28px;
+    }
+
+    &--color:nth-child(2n) {
+      margin-bottom: 27px;
+      margin-right: 0;
     }
 
     &--type {
@@ -430,7 +452,6 @@
 
   .form__input-name {
     width: initial;
-    outline: 1px solid yellow;
     font-size: 19px;
     line-height: 19px;
     padding-top: 15px;
@@ -441,6 +462,7 @@
     flex-grow: 1;
     padding-left: 15px;
     font-size: 19px;
+    margin-bottom: 24px;
 
     &--phone {
       background-position: 95%;
@@ -472,7 +494,8 @@
   }
 
   .form__textarea {
-    flex-basis: 75%;
+    flex-basis: auto;
+    width: 500px;
 
     &::-webkit-input-placeholder {
       font-size: 19px;
@@ -531,15 +554,15 @@
 
     &::before {
       top: 0;
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
     }
 
     &::after {
-      width: 28px;
-      height: 20px;
+      width: 34px;
+      height: 24px;
       top: 15px;
-      left: 15px;
+      left: 11px;
       border-radius: 10px;
     }
   }
@@ -573,7 +596,7 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .form__flex-wrapper {
@@ -591,7 +614,7 @@
     flex-grow: 0;
 
     &--phone {
-      background-position: 100%;
+      background-position: 99%;
     }
 
     &--email {
@@ -603,11 +626,19 @@
     &--color {
       padding-top: 52px;
     }
+
+    &--info {
+      padding-top: 51px;
+    }
   }
 
   .form__block {
     &--color {
-      flex-basis: 264px;
+      flex-basis: 235px;
+    }
+
+    &--color:nth-child(2n) {
+      margin-right: 28px;
     }
 
     &--person {
@@ -616,9 +647,19 @@
   }
 
   .form__title {
-    flex-basis: 1050px/6;
-    padding-right: 0;
+    flex-basis: auto;
+    width: 1050px/6;
+    padding-right: 9px;
     text-align: center;
+
+    &--tel {
+      padding-right: 17px;
+    }
+
+    &--email {
+      padding-right: 0;
+      margin-top: 3px;
+    }
   }
 
   .form__group {

@@ -7,9 +7,7 @@
   .f-bold();
   line-height: 20px;
   color: @black;
-  /*margin-right: 30px;*/
-  /*display: inline-block;
-  vertical-align: middle;*/
+  padding-bottom: 10px;
   flex-grow: 1;
   align-self: center;
   text-align: left;
@@ -17,19 +15,14 @@
 
 .copyright__link {
   font-size: 0;
-  /*background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;*/
-  /*width: 28px;*/
   height: 80px;
-  /*vertical-align: middle;*/
   text-decoration: none;
-  /*padding: 30px 0;*/
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
 
-  &:hover path {
-    fill: @academy-logo-hover;
+  &:hover .copyright__img {
+    fill: @green-hover;
   }
 
   &:focus {
@@ -38,19 +31,20 @@
 }
 
 .copyright__img {
-  /*display: inline-block;
-  vertical-align: middle;*/
-  flex-basis: 26px;
+  flex-basis: 26.943px;
   align-self: center;
+  height: 34.09px;
 
-  path {
-    fill: @light-green;
-  }
+  fill: @light-green;
 }
 
 @media (min-width: @tablet-width) {
   .copyright__link {
     text-align: right;
     padding: 0 50px;
+  }
+
+  .copyright__description {
+    padding-bottom: 0;
   }
 }

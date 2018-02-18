@@ -4,7 +4,7 @@ var navToggle = document.querySelector('.main-nav__toggle');
 
 navMain.classList.remove('main-nav--nojs');
 
-navMain.classList.remove('main-nav--opened');
+/*navMain.classList.remove('main-nav--opened');*/
 navMain.classList.add('main-nav--closed');
 
 navToggle.addEventListener('click', function() {
@@ -24,25 +24,17 @@ var modal = document.querySelector('.modal');
 var modal_bck = document.querySelector('.modal__bck');
 var modal_button = document.querySelector('.modal__button');
 
-item_buttons.forEach(function(item, i, arr) {
-  item.addEventListener('click', function() {
-    modal.style.display = 'block';
-  })
-});
+function showModal(){
+  document.querySelector('.modal').style.display = 'block';
+}
 
-order_buttons.forEach(function(item, i, arr) {
-  item.addEventListener('click', function() {
-    modal.style.display = 'block';
-  })
-});
-
-modal_bck.addEventListener('click', function() {
+modal_bck.onclick = function() {
   modal.style.display = 'none';
-});
+};
 
-modal_button.addEventListener('click', function() {
+modal_button.onclick = function() {
   modal.style.display = 'none';
-});
+};
 
 /*КАРТА*/
 var map_iframe = document.querySelector('.contacts__map iframe');

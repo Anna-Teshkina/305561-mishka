@@ -7,15 +7,10 @@
   box-sizing: border-box;
 }
 
-.hit__title-wrapper {
-  outline: 1px red solid;
-}
-
 .hit__title {
   .h2();
   color: @black;
-  .padding-top-header-mobile();
-  outline: 1px orange solid;
+  padding-top: 28px;
 }
 
 .hit__subtitle {
@@ -25,15 +20,10 @@
   .f-bold();
   margin-top: 5px;
   display: block;
-  outline: 1px orange solid;
-}
-
-.hit__description-wrapper {
-  outline: 1px red solid;
 }
 
 .hit__text-wrapper {
-  outline: 1px orange solid;
+  margin-bottom: 27px;
 }
 
 .hit__description {
@@ -47,7 +37,6 @@
   font-size: 15px;
   line-height: 35px;
   width: 100%;
-  margin-bottom: 25px;
   color: @gray;
   border-collapse: collapse;
 }
@@ -63,13 +52,8 @@
 }
 
 .hit__picture {
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   width: 100%;
-  outline: 1px orange solid;
-}
-
-.hit__order-wrapper {
-  outline: 1px orange solid;
 }
 
 .hit__price {
@@ -87,7 +71,6 @@
 
 @media (min-width: @tablet-width) {
   .hit {
-    /*.padding-tablet();*/
     margin-top: 43px;
   }
 
@@ -106,6 +89,7 @@
     text-align: center;
     .fs-17();
     align-self: center;
+    margin-top: 10px;
   }
 
   .hit__title {
@@ -125,7 +109,6 @@
     padding-right: 43px;
     box-sizing: border-box;
     padding-bottom: 97px;
-    outline: 1px orange solid;
   }
 
   .hit__picture {
@@ -144,7 +127,7 @@
     width: 50%;
     padding-right: 43px;
     box-sizing: border-box;
-    margin-top: -110px;
+    margin-top: -125px;
   }
 
   .hit__description {
@@ -176,17 +159,15 @@
 
   .hit__subtitle {
     padding: 0 15px;
+    margin-top: 13px;
   }
 
   .hit__description-wrapper {
     display: block;
-    /*justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;*/
   }
 
   .hit__description {
-    margin-bottom: 47px;
+    margin-bottom: 50px;
   }
 
   .hit__title-wrapper {
@@ -202,19 +183,21 @@
   .hit__text-wrapper {
     padding-left: 175px;
     padding-right: 55px;
-    padding-bottom: 163px;
+    padding-bottom: 152px;
   }
 
   .hit__order-wrapper {
     padding-left: 175px;
     padding-right: 55px;
+    margin-top: -128px;
   }
 
   .hit__wrapper {
-    background: url("../img/triple-set-desktop@1x.jpg");
-    background-size: 50%;
+    background-image: url("../img/triple-set-desktop@1x.jpg");
+    background-size: 525px;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: 575px 30px;
+    background-color: @white;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/triple-set-desktop@2x.jpg");

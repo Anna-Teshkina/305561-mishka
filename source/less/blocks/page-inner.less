@@ -1,10 +1,14 @@
 .page-inner__header {
   background-color: @bck-gray;
   margin-bottom: 32px;
+}
+
+.page-inner__header-wrapper {
   height: 174px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .page-inner__wrapper {
@@ -16,26 +20,38 @@
 .page-inner__name {
   .h1();
   color: @black;
-  /*.padding-mobile();*/
   text-align: center;
 }
 
 .page-inner__text {
-  /*.padding-mobile();*/
   margin: 0;
   margin-top: -8px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
 }
 
 @media (min-width: @tablet-width) {
-  .page-inner {
-    margin-top: -64px;
+  .page-inner__header-wrapper {
+    height: 225px;
+
+    &::after {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      display: block;
+      width: 100%;
+      content: "";
+      background-repeat: repeat-x;
+      background-position: center 0;
+      background-size: 768px;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+    }
   }
 
   .page-inner__wrapper {
     .padding-tablet();
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   .page-inner__text {
@@ -44,19 +60,29 @@
   }
 
   .page-inner__header {
-    height: 225px;
-    margin-bottom: 80px;
+    position: relative;
+    top: -64px;
+    margin-bottom: 17px;
   }
 
   .page-inner__name {
     .fs-43();
-    margin-top: 17px;
+    margin-top: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-inner {
-    margin-top: -56px;
+  .page-inner__header-wrapper {
+    height: 250px;
+
+    &::after {
+      bottom: -9px;
+      background-size: 1150px;
+    }
+  }
+
+  .page-inner__text br {
+    display: none;
   }
 
   .page-inner__wrapper {
@@ -65,8 +91,8 @@
   }
 
   .page-inner__header {
-    height: 250px;
-    margin-bottom: 135px;
+    top: -56px;
+    margin-bottom: 80px;
   }
 
   .page-inner__name {

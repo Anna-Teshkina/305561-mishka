@@ -5,8 +5,8 @@
 @media (min-width: @tablet-width) {
   .delivery {
     display: block;
-    flex-basis: 50%;
-    /*margin-left: auto;*/
+    flex-basis: 300px;
+    flex-grow: 1;
     order: 4;
     text-align: right;
     padding: 15px 0;
@@ -17,13 +17,5 @@
     &--inner {
       background-color: @bck-gray;
     }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .delivery {
-    flex-basis: 300px;
-    /*margin-left: auto;*/
-    flex-grow: 1;
   }
 }
