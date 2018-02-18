@@ -2,10 +2,6 @@
   text-decoration: none;
   display: block;
 
-  &--img {
-    /*height: 195px;*/
-  }
-
   &--name {
     margin-top: 25px;
 
@@ -66,14 +62,18 @@
   width: 20px;
   height: 20px;
 
-  &:hover path {
+  &:hover .item__cart-img {
     fill: @light-green;
   }
 
-  &:focus path {
+  &:focus .item__cart-img {
     fill: @light-green;
     opacity: 0.3;
   }
+}
+
+.item__cart-img {
+  fill: fade(@black, 20%);
 }
 
 .item__picture {
@@ -94,7 +94,6 @@
   }
 
   .item__picture {
-    /*height: 334px;*/
     width: 334px;
   }
 

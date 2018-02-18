@@ -25,7 +25,7 @@
     color: fade(@black, 60%);
   }
 
-  &:hover path {
+  &:hover .submenu-list__icon {
     fill: @light-green;
     opacity: 1;
   }
@@ -34,7 +34,7 @@
     color: fade(@black, 30%);
   }
 
-  &:active path {
+  &:active .submenu-list__icon {
     opacity: 0.3;
   }
 }
@@ -43,9 +43,7 @@
   position: absolute;
   top: 30px;
   left: 30px;
-
-  width: 21px;
-  height: 18px;
+  fill: fade(@black, 20%);
 
   &--search {
     width: 17.6px;
@@ -56,13 +54,7 @@
     width: 20.294px;
     height: 18.849px;
   }
-
-  path {
-    fill: @black;
-    opacity: 0.2;
-  }
 }
-
 
 @media (min-width: @tablet-width) {
   .submenu-list {

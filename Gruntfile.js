@@ -62,11 +62,12 @@ module.exports = function(grunt) {
 
     svgstore: {
       options: {
-        includeTitleElement: false
+        includeTitleElement: false,
+        cleanup: ["fill","stroke"]
       },
       sprite: {
         files: [{
-          "build/img/sprite.svg": ["source/img/icon-*.svg"]
+          "build/img/sprite.svg": ["source/img/icon-*.svg", "source/img/logo-htmlacademy.svg"]
         }]
       }
     },
